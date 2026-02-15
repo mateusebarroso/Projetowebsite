@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <title>Sobre mim</title>
+    <link rel="stylesheet" href="sobre.css">
+</head>
+
+<body>
+  <main class="content">   
+   <figure class="img">
+      <img src="mobile.svg" alt="" class="formato-svg" />
+   </figure>
+   <div>
+   <h2 class="titulo-h2">Desenvolvedor Front-End<br><span class="text-black" id="typing-text"></span>
+   <span class="cursor"></span></h2>
+   </div>
+    <section class="formatacao-section">
+    
+
+    
+    <p class="paragrafo1">
+     <strong> Soft Skills:</strong> Colaboração, Resolução de Problemas, Comunicação, Adaptabilidade. 
+    </p>
+    <p>
+       Gosto muita dessa área  de front-end, apaixonado por Desenvolvimento Web
+       </p>
+   
+ </section>
+  </main>
+ <footer class="roda-pe">
+     <img src="static.svg" alt="" class="formato-svg" />
+     <div class="father-link">
+        <a href="index.html"class="link-cadastro">Cadastre-se na aplicação</a>
+     </div>
+     <div>
+                        <p class="text-roda-pe">&copy; 2026 Todos os direitos reservados ao <u>desenvolvedor
+                </u>
+                </p>
+     </div>
+ </footer>
+   <script>
+const textElement = document.getElementById('typing-text');
+
+const word = "Mateus Evangelista Barroso";
+let index = 0;
+let isDeleting = false;
+let speed = 200; // Velocidade da digitação
+
+function type() {
+  // Pega a parte da palavra baseada no índice atual
+  const currentText = isDeleting 
+    ? word.substring(0, index--) 
+    : word.substring(0, index++);
+
+  textElement.textContent = currentText;
+
+  // Ajusta a velocidade (mais rápido ao apagar)
+  let typeSpeed = isDeleting ? 100 : 200;
+
+  // Se terminou de escrever a palavra inteira
+  if (!isDeleting && index > word.length) {
+    isDeleting = true;
+    typeSpeed = 2000; // Pausa antes de começar a apagar
+  } 
+  // Se terminou de apagar tudo
+  else if (isDeleting && index < 0) {
+    isDeleting = false;
+    index = 0;
+    typeSpeed = 500; // Pausa antes de escrever de novo
+  }
+
+  setTimeout(type, typeSpeed);
+}
+
+// Inicia o loop
+type();
+
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:"Ubuntu";
+}
+body{
+   background-color:#A5BEfA;
+   
+}
+.img{
+   text-align:center;
+   margin-top:16px;
+   
+}
+.formato-svg{
+   width: 15rem;
+   
+}
+.formato-section{
+   text-align: center;
+}
+.formatacao-section{
+   text-align: center;
+   line-height: 160%;
+}
+.titulo-h2{
+   margin-top:2rem;
+   text-align:center;
+   font-size: 2rem;
+}
+.roda-pe{
+display:flex;
+align-items: center;
+}
+body{
+   display:flex;
+   flex-direction:column;
+   min-height:100vh;
+   margin:0;
+}
+
+.content{
+   flex:1;
+}
+
+.paragrafo1{
+   margin-top: 2rem;
+}
+
+/*
+link roda-pe
+*/.father-link{
+   margin-top:16px;
+}
+.link-cadastro{
+   color: #000;
+   font-weight:bolder;
+   
+}
+/*
+Mediaquerys
+*/
+
+@media screen and (max-width: 384px){
+   body{
+      background-color:white;
+   }
+   .roda-pe{
+      display: flex;
+      flex-direction:column;
+      text-align: center;
+   }
+   .formatacao-section{
+      font-size: 0.9rem;
+   }
+   .titulo-h2{
+      font-size:1.5rem;
+      /*color: rgb(255, 129, 255);*/
+      color:#ff25f0;
+   }
+   .text-black{
+      color:#000;
+   }
+   .text-roda-pe{
+      margin-top:16px;
+   }
+   .link-cadastro{
+      font-size:1.2rem;
+    cursor:pointer;
+   }
+}
+
+
+  #typing-text {
+    color: #000; /* Cor para destacar a palavra */
+    font-weight: bold;
+    margin-left:10px;
+  }
+  /* Estilo para o cursor piscando */
+  .cursor {
+  
+    margin-left: 3px;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
